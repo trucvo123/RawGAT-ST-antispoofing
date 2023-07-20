@@ -187,7 +187,7 @@ if __name__ == '__main__':
     dir_yaml = os.path.splitext('model_config_RawGAT_ST')[0] + '.yaml'
 
     with open(dir_yaml, 'r') as f_yaml:
-            parser1 = yaml.load(f_yaml)
+            parser1 = yaml.safe_load(f_yaml)
     
     if not os.path.exists('models'):
         os.mkdir('models')
